@@ -24,7 +24,7 @@ class RequestLuggageSpace extends React.Component {
           
           <input type="number" name="numberofluggagespace" className="form-control" placeholder="Enter here the number of luggage space needed" required></input> <br></br>
 
-          <input type="submit" name="submit" className="btn btn-primary" value="Sign in"></input>
+          <input type="submit" name="submit" className="btn btn-primary" value="Submit"></input>
         </form>
         </div>
       </div>

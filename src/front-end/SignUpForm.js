@@ -18,7 +18,7 @@ class Form extends React.Component {
 
           <input type="text" name="lname" className="form-control" placeholder="Last name" required></input><br></br>
 
-          <input type="email" name="email" className="form-control" placeholder="Email" required></input><br></br>
+          <input type="email" name="email" className="form-control" placeholder="email@example.com" required></input><br></br>
 
           <input type="tel" name="tel" className="form-control" placeholder="Telephone/Mobile number" required></input><br></br>
 
