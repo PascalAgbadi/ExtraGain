@@ -14,8 +14,9 @@ class HowItWorks extends React.Component {
                   Register, login, then list your upcoming flight itinerary on
                   our platform. By doing so, you’re telling our shipping
                   partners the dates of your trip, the route that you’re taking,
-                  and how many checked luggage slots you’ll have available for
-                  shipments.
+                  and (1) how many checked luggage slots you’ll need and make
+                  payment (2) or how many checked luggage slots you’ll have
+                  available for shipments.
                 </p>
               </div>
             </div>
