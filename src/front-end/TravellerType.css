@@ -1,0 +1,13 @@
+.centered-one {
+  position: fixed;
+  left: 35%;
+  top: 50%;
+  /* transform: translate(-50%, -50%); */
+}
+
+.centered-two {
+    position: fixed;
+    left: 55%;
+    top: 50%;
+    /* transform: translate(-50%, -50%); */
+  }

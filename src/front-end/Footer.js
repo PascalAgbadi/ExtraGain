@@ -1,16 +1,15 @@
 import React from "react";
+import { Layout } from 'antd';
 
-
-class Footer extends React.Component {
-  render() {
+export default function Footer() {
     return (
-      <nav className="navbar fixed-bottom navbar-light bg-light border border-secondary rounded">
-        <a className="navbar-brand" href="#">
-          Fixed bottom
-        </a>
-      </nav>
+      <div>
+      <Layout>
+      <Footer>Footer</Footer>
+      </Layout>
+      </div>
     );
   }
-}
 
-export default Footer;
+
+

@@ -1,5 +1,10 @@
 import React from "react";
 import {withRouter} from "react-router-dom";
+// import Button from '@material-ui/core/Button';
+
+
+
+
 class SignInForm extends React.Component {
   constructor(props) {
     super(props);
@@ -24,11 +29,11 @@ class SignInForm extends React.Component {
     .then((res) => res.json())
     .then((res) => {
       const result = JSON.stringify(res);
-      if (res.status == "success") {
+      if (res.status === "success") {
         console.log(res);
         localStorage.setItem("user", JSON.stringify(res.user));
         this.props.history.push("/Dashoard");
-      } else if (result.status == "NotFound") {
+      } else if (result.status === "NotFound") {
         alert("Invalid email or password");
       }
      

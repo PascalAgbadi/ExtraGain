@@ -1,7 +1,7 @@
 import React from "react";
 import "./NavBar.css";
 import {
-  BrowserRouter as Router,
+  BrowserRouter as //Router,
   // Route,
   Link,
   // Switch
