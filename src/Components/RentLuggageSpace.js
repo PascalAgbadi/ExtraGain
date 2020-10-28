@@ -1,18 +1,39 @@
-import React from "react";
+import React, {useState} from "react";
+import {useHistory} from 'react-router-dom';
 
-class RequestLuggageSpace extends React.Component {
-  render() {
-    return (
-      <div className="row text-center">
+export default  function RentLuggageSpaceclass() {
+  const history = useHistory()
+   const [state, setState] = useState ({
+    airline : "",
+    departurecountry : "",
+    departuredate : "",
+    departuretime : "",
+    arrivalcountry : "",
+    arrivaldate : "",
+    arrivaltime : "",
+    numberofluggagespacetolet : ""
+   })
+   const handleChange = (e) => {
+    const {id , value} = e.target   
+    setState(prevState => ({
+        ...prevState,
+        [id] : value
+    }))
+}
+  
+  return (
+      <div className="row text-center main-content-wrapper">
         <form className="col-md-4 offset-md-4">
           <p>
-            <strong>Travel Plan and luggage space request</strong>
+            <strong>Travel Plan and luggage space to let</strong>
           </p>
           <input
             type="text"
             name="airline"
             className="form-control"
             placeholder="Name of airline"
+            value={state.airline}
+            onChange={handleChange}
             required
           ></input>{" "}
           <br></br>
@@ -21,6 +42,8 @@ class RequestLuggageSpace extends React.Component {
             name="departurecountry"
             className="form-control"
             placeholder="Departure country"
+            value={state.departurecountry}
+            onChange={handleChange}
             required
           ></input>{" "}
           <br></br>
@@ -29,6 +52,8 @@ class RequestLuggageSpace extends React.Component {
             name="departuredate"
             className="form-control"
             placeholder="Departure date"
+            value={state.departuredate}
+            onChange={handleChange}
             required
           ></input>{" "}
           <br></br>
@@ -37,6 +62,8 @@ class RequestLuggageSpace extends React.Component {
             name="departuretime"
             className="form-control"
             placeholder="Departure time"
+            value={state.departuretime}
+            onChange={handleChange}
             required
           ></input>{" "}
           <br></br>
@@ -45,6 +72,8 @@ class RequestLuggageSpace extends React.Component {
             name="arrivalcountry"
             className="form-control"
             placeholder="Arrival country"
+            value={state.arrivalcountry}
+            onChange={handleChange}
             required
           ></input>{" "}
           <br></br>
@@ -53,14 +82,18 @@ class RequestLuggageSpace extends React.Component {
             name="arrivaledate"
             className="form-control"
             placeholder="Arrival date"
+            value={state.arrivaldate}
+            onChange={handleChange}
             required
           ></input>{" "}
           <br></br>
           <input
             type="time"
-            name="departuretime"
+            name="arrivaltime"
             className="form-control"
-            placeholder="Departure time"
+            placeholder="Arrival time"
+            value={state.arrivaltime}
+            onChange={handleChange}
             required
           ></input>{" "}
           <br></br>
@@ -68,7 +101,9 @@ class RequestLuggageSpace extends React.Component {
             type="number"
             name="numberofluggagespace"
             className="form-control"
-            placeholder="Number of luggage space needed"
+            placeholder="Number of luggage slot to let"
+            value={state.numberofluggagespacetolet}
+            onChange={handleChange}
             required
           ></input>{" "}
           <br></br>
@@ -77,11 +112,13 @@ class RequestLuggageSpace extends React.Component {
             name="submit"
             className="btn btn-primary"
             value="Submit"
+            onClick={()=>history.push("/travellertype")}
           ></input>
+          <br></br>
         </form>
       </div>
     );
   }
-}
 
-export default RequestLuggageSpace;
+
+

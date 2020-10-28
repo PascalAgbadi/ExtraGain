@@ -5,7 +5,7 @@ import SignInForm from './SignInForm';
 class UserLogin extends React.Component {
   render() {
     return (
-            <div>
+            <div className="main-content-wrapper">
               <SignInForm/>
             </div>
     );

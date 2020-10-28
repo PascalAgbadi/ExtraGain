@@ -77,3 +77,14 @@ body {
     50% { border-color: orange }
   }
 
+.home-background {
+    height: 200vh;
+    background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0.20), rgba(0, 0, 0, 0.20)),url('../assets/Picture.jpg');
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center
+}

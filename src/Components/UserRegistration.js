@@ -3,8 +3,8 @@ import SignUpForm from './SignUpForm';
 
 
 
-class UserRegistration extends React.Component {
-  render() {
+export default function UserRegistration() {
+  
     return (
       
         <div>
@@ -13,6 +13,4 @@ class UserRegistration extends React.Component {
       
     );
   }
-}
 
-export default UserRegistration;

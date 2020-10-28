@@ -32,7 +32,7 @@ class SignInForm extends React.Component {
       if (res.status === "success") {
         console.log(res);
         localStorage.setItem("user", JSON.stringify(res.user));
-        this.props.history.push("/Dashoard");
+        // this.props.history.push("/TravellerType");
       } else if (result.status === "NotFound") {
         alert("Invalid email or password");
       }
